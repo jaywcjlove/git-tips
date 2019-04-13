@@ -10,6 +10,7 @@ git-tips
 - [配置管理](#配置管理)
 - [不常见的使用场景](#不常见的使用场景)
   - [配置自动换行](#配置自动换行)
+  - [忽略文件的权限变化](#忽略文件的权限变化)
   - [创建SSH密钥](#创建ssh密钥)
   - [多账号ssh配置](#多账号ssh配置)
   - [免密码登录远程服务器](#免密码登录远程服务器)
@@ -136,10 +137,17 @@ git config --list  # 查看配置的信息
 git config --global user.name "小弟调调"          # 修改全局名字
 git config --global user.email "wowohoo@qq.com"  # 修改全局邮箱
 git config --global --unset <entry-name>  # 删除全局设置
-git config core.fileMode false # 忽略文件的权限变化，不再将文件的权限变化视作改动
 ```
 
 ## 不常见的使用场景
+
+### 忽略文件的权限变化
+
+不再将文件的权限变化视作改动
+
+```bash
+git config --global core.autocrlf input
+```
 
 ### 配置自动换行
 

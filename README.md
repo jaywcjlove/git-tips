@@ -24,7 +24,7 @@ git-tips
   - [去掉某个 commit](#去掉某个commit)
   - [把 A 分支的某一个 commit，放到 B 分支上](#把-a-分支的某一个-commit放到-b-分支上)
   - [获取最近一次提交的 commit id](#获取最近一次提交的-commit-id)
-  - [合并多个commit](#合并多个commit)
+  - [合并多个 commit](#合并多个commit)
   - [修改远程 commit 记录](#修改远程commit记录)
   - [利用commit关闭一个issue](#利用commit关闭一个issue)
   - [新建一个空分支](#新建一个空分支)
@@ -79,7 +79,6 @@ git-tips
   - [重命名Tag](#重命名tag)
 - [日志log](#日志log)
 - [重写历史](#重写历史)
-  - [删除仓库](#删除仓库)
 - [其它](#其它)
 - [报错问题解决](#报错问题解决)
 - [参考资料](#参考资料)
@@ -573,6 +572,8 @@ git commit --amend --author='Author Name <email@address.com>'
 
 ### 批量修改历史commit中的名字和邮箱
 
+这是 [Github官方教程](https://help.github.com/articles/changing-author-info/)
+
 **1.克隆仓库**
 
 注意参数，这个不是普通的clone，clone下来的仓库并不能参与开发
@@ -636,6 +637,13 @@ remote: GitLab: You are not allowed to force push code to a protected branch on 
 git pull  --allow-unrelated-histories
 # 或者指定分枝
 git pull origin master --allow-unrelated-histories
+```
+
+**4. 删除仓库**
+
+```bash
+cd ..
+rm -rf repo.git
 ```
 
 ### 查看两个星期内的改动
@@ -1109,15 +1117,6 @@ pick a5f4a0d added cat-file
 pick 310154e updated README formatting and added blame
 pick f7f3f6d changed my name a bit
 ```
-
-### 删除仓库
-
-```
-cd ..
-rm -rf repo.git
-```
-
-[Github官方教程](https://help.github.com/articles/changing-author-info/)
 
 ## 其它
 

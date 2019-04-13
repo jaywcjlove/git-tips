@@ -130,14 +130,13 @@ yum install git2u
 
 首先是配置帐号信息 `ssh -T git@github.com` 测试。
 
-**修改项目中的个人信息**
-
 ```bash
 git help config    # 获取帮助信息，查看修改个人信息的参数  
 git config --list  # 查看配置的信息
 git config --global user.name "小弟调调"          # 修改全局名字
 git config --global user.email "wowohoo@qq.com"  # 修改全局邮箱
 git config --global --unset <entry-name>  # 删除全局设置
+git config core.fileMode false # 忽略文件的权限变化，不再将文件的权限变化视作改动
 ```
 
 ## 不常见的使用场景

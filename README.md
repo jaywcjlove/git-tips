@@ -29,6 +29,7 @@ git-tips
   - [利用commit关闭一个issue](#利用commit关闭一个issue)
   - [新建一个空分支](#新建一个空分支)
   - [添加忽略文件](#添加忽略文件)
+  - [忽略某个文件的改动](#忽略某个文件的改动)
   - [同步fork的上游仓库](#同步fork的上游仓库)
   - [批量修改历史commit中的名字和邮箱](#批量修改历史commit中的名字和邮箱)
   - [查看某个文件历史](#查看某个文件历史)
@@ -506,6 +507,13 @@ git state
 
 ```
 echo node_modules/ >> .gitignore
+```
+
+### 忽略某个文件的改动
+
+```bash
+git update-index --assume-unchanged path/to/file # 关闭 track 指定文件的改动，也就是 Git 将不会在记录这个文件的改动
+git update-index --no-assume-unchanged path/to/file # 恢复 track 指定文件的改动
 ```
 
 ### 同步fork的上游仓库

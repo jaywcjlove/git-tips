@@ -146,7 +146,7 @@ git config --global --unset <entry-name>  # 删除全局设置
 不再将文件的权限变化视作改动
 
 ```bash
-git config --global core.autocrlf input
+git config core.fileMode false
 ```
 
 ### 配置自动换行

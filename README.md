@@ -36,6 +36,7 @@ git-tips
   - [查看某个文件历史](#查看某个文件历史)
   - [查看两个星期内的改动](#查看两个星期内的改动)
   - [查看git仓库中最近修改的分支](#查看git仓库中最近修改的分支)
+  - [更新所有本地分支](#更新所有本地分支)
   - [打造自己的git命令](#打造自己的git命令)
   - [中文乱码的解决方案](#中文乱码的解决方案)
   - [删除已经合并到 master 的分支](#删除已经合并到-master-的分支)
@@ -682,6 +683,14 @@ git whatchanged 文件名  # 显示某个文件的每个版本提交信息：提
 
 ```bash
 git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+```
+
+### 更新所有本地分支
+
+```bash
+git branch \
+  --format "%(if)%(upstream:short)%(then)git push . %(upstream:short):%(refname:short)%(end)" |
+  sh
 ```
 
 ### 打造自己的git命令

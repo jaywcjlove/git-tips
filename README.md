@@ -32,6 +32,7 @@ git-tips
   - [添加忽略文件](#添加忽略文件)
   - [忽略某个文件的改动](#忽略某个文件的改动)
   - [同步fork的上游仓库](#同步fork的上游仓库)
+  - [手动合并冲突的 Pull Request](#手动合并冲突的-pull-request)
   - [批量修改历史commit中的名字和邮箱](#批量修改历史commit中的名字和邮箱)
   - [查看某个文件历史](#查看某个文件历史)
   - [查看两个星期内的改动](#查看两个星期内的改动)
@@ -579,6 +580,33 @@ git merge upstream/master
 #  2 files changed, 7 insertions(+), 9 deletions(-)
 #  delete mode 100644 README
 #  create mode 100644 README.md
+```
+
+### 手动合并冲突的 Pull Request
+
+以 [tsbbjs/tsbb](https://github.com/tsbbjs/tsbb) 为例，合并来自 [jaywcjlove/tsbb](https://github.com/jaywcjlove/tsbb) master分支的 `Pull Request`。
+
+```bash
+# 1. 克隆主仓库
+git clone git@github.com:tsbbjs/tsbb.git 
+# 2. 在主仓库 master 分支切个 jaywcjlove-master 分支出来，并且切换到 jaywcjlove-master 分支
+git checkout -b jaywcjlove-master master
+# 3. 获取 jaywcjlove/tsbb 仓库 master 分支最新代码
+git pull https://github.com/jaywcjlove/tsbb.git master
+# ⚠️ 注意下面是输出内容：
+# ----------------------
+# Auto-merging src/babel/transform.ts
+# CONFLICT (content): Merge conflict in src/babel/transform.ts
+# ----------------------
+# ⚠️ 注意上面 CONFLICT 标识是有冲突无法自动合并的代码，根据路径进入代码手动合并
+# 4. 合并完成之后，进行 commit 说明合并内容
+git commit -m "Merge branch 'master' of github.com:jaywcjlove/tsbb #3"
+# 5. 切换到 master 分支，如果是 PR 其它分支，这里就切其它分支
+git checkout master
+# 6. 合并 jaywcjlove-master 分支的代码
+git merge --no-ff jaywcjlove-master
+# 7. 提交代码
+git push origin master
 ```
 
 ### 修改作者名

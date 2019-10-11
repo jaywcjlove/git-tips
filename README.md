@@ -23,6 +23,7 @@ git-tips
   - [放弃本地的文件修改](#放弃本地的文件修改)
   - [最简单放弃本地修改内容](#最简单放弃本地修改内容)
   - [回退到某一个版本](#回退到某一个版本)
+  - [搜索 commit 历史记录](#搜索-commit-历史记录)
   - [回滚到某个commit提交](#回滚到某个commit提交)
   - [去掉某个commit](#去掉某个commit)
   - [把 A 分支的某一个 commit，放到 B 分支上](#把-a-分支的某一个-commit放到-b-分支上)
@@ -403,6 +404,13 @@ git reset --hard <hash>
 # 例如 git reset --hard a3hd73r
 # --hard代表丢弃工作区的修改，让工作区与版本代码一模一样，与之对应，
 # --soft参数代表保留工作区的修改。
+```
+
+### 搜索 commit 历史记录
+
+```shell
+git log --grep=224
+# 这条命令是查看含有 "224" 关键字的 git commit 
 ```
 
 ### 回滚到某个commit提交
@@ -1126,7 +1134,8 @@ git push -f --tags
 ```bash
 git config format.pretty oneline  # 显示历史记录时，每个提交的信息只显示一行   
 git config color.ui true # 彩色的 git 输出   
-git log # 查看最近的提交日志   
+git log # 查看最近的提交日志
+git log --grep=224 # 这条命令是查看含有 "224" 关键字的 git commit 
 git log --pretty=oneline # 单行显示提交日志   
 git log --graph --pretty=oneline --abbrev-commit   
 git log -num # 显示第几条log（倒数）   

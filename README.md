@@ -1261,6 +1261,14 @@ vi ~/.ssh/known_hosts # 删除对应ip的相关rsa信息
 rm known_hosts # 或者直接全部删除
 ```
 
+**5. insufficient permission for adding an object to repository database .git/objects**
+
+```
+cd .git/objects
+ls -al
+sudo chown -R yourname:yourgroup *
+```
+
 ## 参考资料
 
 - [Git官网](http://git-scm.com/)

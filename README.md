@@ -12,6 +12,7 @@ git-tips
 - [配置管理](#配置管理)
 - [不常见的使用场景](#不常见的使用场景)
   - [忽略文件的权限变化](#忽略文件的权限变化)
+  - [设置大小写敏感](#设置大小写敏感)
   - [配置自动换行](#配置自动换行)
   - [创建SSH密钥](#创建ssh密钥)
   - [多账号ssh配置](#多账号ssh配置)
@@ -155,6 +156,13 @@ git config --global --unset <entry-name>  # 删除全局设置
 
 ```bash
 git config core.fileMode false
+```
+
+### 设置大小写敏感
+
+```bash
+git config --get core.ignorecase # 查看git 的设置
+git config core.ignorecase false # 设置大小写敏感
 ```
 
 ### 配置自动换行

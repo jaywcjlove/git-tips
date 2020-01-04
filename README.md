@@ -1051,6 +1051,7 @@ git clone https://github.com/jaywcjlove/handbook.git --depth=1 --recurse-submodu
 克隆项目，之后再手动克隆 submodule 子项目
 
 ```bash
+git submodule add -b gh-pages --force '仓库地址' '路径'
 git submodule add --force '仓库地址' '路径'
 # 其中，仓库地址是指子模块仓库地址，路径指将子模块放置在当前工程下的路径。
 # 注意：路径不能以 / 结尾（会造成修改不生效）、不能是现有工程已有的目录（不能順利 Clone）

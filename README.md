@@ -80,7 +80,8 @@ git-tips
   - [分支切换](#分支切换)
 - [远端](#远端)
 - [submodule](#submodule)
-- [更新](#更新)
+  - [更新 submodule](#更新-submodule)
+  - [删除 submodule](#删除-submodule)
   - [转换分支](#转换分支)
 - [删除文件](#删除文件)
 - [remote](#remote-1)
@@ -1068,7 +1069,7 @@ git pull --recurse-submodules # 更新 submodule git 1.7.3 版本
 git submodule foreach --recursive git submodule init
 ```
 
-## 更新
+### 更新 submodule
 
 ```bash
 git submodule foreach git pull  # submodule 里有其他的 submodule 一次更新
@@ -1076,6 +1077,18 @@ git submodule foreach git pull origin master # submodule更新
 git submodule foreach --recursive git submodule update
 git submodule update --recursive --remote
 git pull --recurse-submodules
+```
+
+### 删除 submodule
+
+```bash
+git ls-files --stage <子项目名称路径> # 查看子项目
+vim .gitmodules # 删除对应的 submodule
+vim .git/config # 删除对应的 submodule
+git rm --cached <子模块名称> # 删除缓存中的子项目，注意没有 `/`
+git rm --cached subProjectName
+rm -rf project/subProjectName
+rm .git/module/* # 删除模块下的子模块目录，每个子模块对应一个目录，注意只删除对应的子模块目录即可
 ```
 
 ### 转换分支

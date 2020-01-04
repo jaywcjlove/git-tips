@@ -1077,6 +1077,7 @@ git submodule foreach git pull origin master # submodule更新
 git submodule foreach --recursive git submodule update
 git submodule update --recursive --remote
 git pull --recurse-submodules
+git submodule deinit --all -f # 清理 submodule
 ```
 
 ### 删除 submodule

@@ -1101,9 +1101,9 @@ $ git config -f .gitmodules submodule.public.branch gh-pages
 
 ```
 [submodule "public"]
-	path = public
-	url = git@github.com:jaywcjlove/gitke.git
-	branch = gh-pages
+  path = public
+  url = git@github.com:jaywcjlove/gitke.git
+  branch = gh-pages
 ```
 
 ## 删除文件

@@ -29,7 +29,7 @@ git-tips
   - [去掉某个commit](#去掉某个commit)
   - [把 A 分支的某一个 commit，放到 B 分支上](#把-a-分支的某一个-commit放到-b-分支上)
   - [获取最近一次提交的 commit id](#获取最近一次提交的-commit-id)
-  - [两个 git 仓库合并](#两个-git 仓库合并)
+  - [两个 git 仓库合并](#两个-git-仓库合并)
   - [合并多个commit](#合并多个commit)
   - [修改远程Commit记录](#修改远程commit记录)
   - [利用commit关闭一个issue](#利用commit关闭一个issue)

@@ -29,6 +29,7 @@ git-tips
   - [去掉某个commit](#去掉某个commit)
   - [把 A 分支的某一个 commit，放到 B 分支上](#把-a-分支的某一个-commit放到-b-分支上)
   - [获取最近一次提交的 commit id](#获取最近一次提交的-commit-id)
+  - [两个 git 仓库合并](#两个-git 仓库合并)
   - [合并多个commit](#合并多个commit)
   - [修改远程Commit记录](#修改远程commit记录)
   - [利用commit关闭一个issue](#利用commit关闭一个issue)
@@ -450,6 +451,36 @@ git checkout <branch-name> && git cherry-pick <commit-id>
 ```bash
 git rev-parse HEAD # e10721cb8859b2cd340d31a52ef4bf4b9629ddda
 git rev-parse --short HEAD # e10721c
+```
+
+### 两个 git 仓库合并
+
+现在有两个仓库 [kktjs/kkt](https://github.com/kktjs/kkt.git) 和 [kktjs/kkt-next](https://github.com/kktjs/kkt-next.git) 我们需要将 `kkt-next` 仓库合并到 `kkt` 并保留 `kkt-next` 的所有提交内容。
+
+```bash
+# 1. 克隆主仓库代码
+git clone git@github.com:kktjs/kkt.git
+# 2. 将 kkt-next 作为远程仓库，添加到 kkt 中，设置别名为 other
+git remote add other git@github.com:kktjs/kkt-next.git
+# 3. 从 kkt-next 仓库中拉取数据到本仓库
+git fetch other
+# 4. 将 kkt-next 仓库拉取的 master 分支作为新分支 checkout 到本地，新分支名设定为 kkt-next
+git checkout -b kkt-next other/master
+# 5. 切换回 kkt 的 master 分支
+git checkout master
+# 6. 将 kkt-next 合并入 kkt 的 master 分支
+git merge kkt-next
+# 如果第 6 步报错 `fatal: refusing to merge unrelated histories`
+# 请执行下面命令 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+git merge kkt-next --allow-unrelated-histories
+```
+
+在合并时有可能两个分支对同一个文件都做了修改，这时需要解决冲突，对文本文件来说很简单，根据需要对冲突的位置进行处理就可以。对于二进制文件，需要用到如下命令:
+
+```bash
+git checkout --theirs YOUR_BINARY_FILES     # 保留需要合并进来的分支的修改
+git checkout --ours YOUR_BINARY_FILES       # 保留自己的修改
+git add YOUR_BINARY_FILES
 ```
 
 ### 合并多个commit

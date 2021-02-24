@@ -1205,6 +1205,7 @@ git log --pretty=format:'%h : %s - %ad' --date=short   # 日期YYYY-MM-DD显示
 git log --pretty=oneline --graph --decorate --all # 展示简化的 commit 历史
 git log <last tag> HEAD --pretty=format:%s # 只显示commit   
 git config --global format.pretty '%h : %s - %ad' --date=short #日期YYYY-MM-DD显示 写入全局配置
+git config --global format.pretty "%h: %s @%cn %ai"
 ```
 
 |选项 | 说明|选项 | 说明|

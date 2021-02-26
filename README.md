@@ -1187,6 +1187,8 @@ git push -f --tags
 ## 日志log
 
 ```bash
+git config --global format.pretty "%Cgreen%h%Creset %s %Cblue@%cn%Creset %Cred%ai%Creset" # 全局配置彩色 log 输出
+git config --global format.pretty "%h: %s @%cn %ai" # 全局配置格式化后的 log
 git config format.pretty oneline  # 显示历史记录时，每个提交的信息只显示一行   
 git config color.ui true # 彩色的 git 输出   
 git log # 查看最近的提交日志
@@ -1205,7 +1207,6 @@ git log --pretty=format:'%h : %s - %ad' --date=short   # 日期YYYY-MM-DD显示
 git log --pretty=oneline --graph --decorate --all # 展示简化的 commit 历史
 git log <last tag> HEAD --pretty=format:%s # 只显示commit   
 git config --global format.pretty '%h : %s - %ad' --date=short #日期YYYY-MM-DD显示 写入全局配置
-git config --global format.pretty "%h: %s @%cn %ai"
 ```
 
 |选项 | 说明|选项 | 说明|

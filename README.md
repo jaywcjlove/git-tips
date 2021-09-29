@@ -1162,6 +1162,7 @@ git remote show origin  # 查看指定源的全部信息
 当开发到一定阶段时，给程序打标签是非常棒的功能。  
 
 ```bash
+git tag -a v0.1.1 9fbc3d0           # 补打 tag，根据 hash 创建 tag
 git tag -a v0.1 -m 'my version 1.4' # 新建带注释标签   
 git push origin --tags              # 一次性推送所有分支 
 git push origin v1.5                # 推送单个tag到orgin源上 

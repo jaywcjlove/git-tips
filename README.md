@@ -1,6 +1,8 @@
 Git Tips
 ===
 
+[![Gitee Tips](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://jaywcjlove.gitee.io/git-tips/)
+
 一些使用技巧和笔记笔记，记录一些 git 常用和一些记不住的命令，这个笔记原本是基于 [颜海镜的文章](http://yanhaijing.com/git/2014/11/01/my-git-note)增加的，后面慢慢增加了许多内容，独立一个仓库维护，方便查询和使用。
 
 目录

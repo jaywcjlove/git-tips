@@ -1,0 +1,12 @@
+{
+  "markdown-to-html": {
+    "document": {
+      "title": "Git Tips 的一些使用技巧和笔记",
+      "meta": [
+        { "description": "一些使用技巧和笔记笔记，记录一些 git 常用和一些记不住的命令" },
+        { "keywords": "git,tips,handbook" }
+      ]
+    },
+    "github-corners": "https://github.com/jaywcjlove/git-tips"
+  }
+}

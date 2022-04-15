@@ -1,10 +1,14 @@
+<!--idoc:ignore:start-->
 Git Tips
 ===
+<!--idoc:ignore:end-->
 
 [![Gitee Tips](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://jaywcjlove.gitee.io/git-tips/)
+[![CI](https://github.com/jaywcjlove/git-tips/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/git-tips/actions/workflows/ci.yml)
 
 一些使用技巧和笔记笔记，记录一些 git 常用和一些记不住的命令，这个笔记原本是基于 [颜海镜的文章](http://yanhaijing.com/git/2014/11/01/my-git-note)增加的，后面慢慢增加了许多内容，独立一个仓库维护，方便查询和使用。
 
+<!--idoc:ignore:start-->
 目录
 ===
 
@@ -97,6 +101,7 @@ Git Tips
 - [参考资料](#参考资料)
 
 <!-- /TOC -->
+<!--idoc:ignore:end-->
 
 ## 安装卸载
 
@@ -1353,3 +1358,17 @@ sudo chown -R yourname:yourgroup *
 - [Git进阶用法，主要是rebase高级用法](http://way.oschina.io/2016/12/15/notes/GitAdvance/?utm_source=gank.io&utm_medium=email)
 - [成为一个git大师](https://www.atlassian.com/git/tutorials)
 - [高质量的Git中文教程](https://github.com/geeeeeeeeek/git-recipes)
+
+## Contributors
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/jaywcjlove/git-tips/graphs/contributors">
+  <img src="https://jaywcjlove.github.io/git-tips/CONTRIBUTORS.svg" />
+</a>
+
+Made with [action-contributors](https://github.com/jaywcjlove/github-action-contributors).
+
+## License
+
+MIT © [Kenny Wong](https://github.com/jaywcjlove)

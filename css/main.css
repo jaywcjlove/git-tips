@@ -31,10 +31,8 @@ body {
 }
 
 markdown-style {
-  flex: 1 auto;
-  max-width: 100%;
-  min-width: 0;
   min-height: 60vh;
+  grid-area: main;
 }
 markdown-style img {
   background-color: transparent !important;
@@ -44,7 +42,23 @@ markdown-style img {
   padding: 0 20px;
   padding-top: 32px;
   margin-top: 48px;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 3.5fr) minmax(0, 15rem);
+  grid-template-areas: 'main toc';
+  grid-gap: 18px;
+  gap: 18px;
+}
+.warpper-content.sidebar {
+  grid-template-columns: 180px minmax(0, 3.5fr) minmax(0, 15rem);
+  grid-template-areas: 'sidebar main toc';
+}
+.warpper-content.notocs {
+  grid-template-columns: minmax(0, 3.5fr);
+  grid-template-areas: 'main';
+}
+.warpper-content.sidebar.notocs {
+  grid-template-columns: 180px minmax(0, 3.5fr);
+  grid-template-areas: 'sidebar main';
 }
 
 nav.tocs .is-position-fixed {
@@ -52,10 +66,9 @@ nav.tocs .is-position-fixed {
   max-height: calc(100% - 68px);
 }
 nav.tocs {
-  margin-left: 24px;
   line-height: 26px;
-  flex: 0 0 240px;
   position: relative;
+  grid-area: toc;
 }
 nav.tocs p {
   color: var(--color-fg-muted);
@@ -69,7 +82,7 @@ nav.tocs a {
 nav.tocs .inner {
   padding: 10px 10px 10px 10px;
   background-color: var(--color-hoc-bg);
-  min-width: 240px;
+  max-width: 240px;
   width: 240px;
 }
 

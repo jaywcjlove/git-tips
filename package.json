@@ -10,6 +10,6 @@
     "url": "https://github.com/jaywcjlove/git-tips.git"
   },
   "dependencies": {
-    "idoc": "^1.3.0"
+    "idoc": "^1.10.5"
   }
 }

@@ -3,7 +3,7 @@
 ===
 <!--idoc:ignore:end-->
 
-![git 入门备忘清单](./git.png)
+![Git 入门备忘清单](./git.png)
 <!--rehype:style= max-width: 660px; margin: 0 auto;-->
 
 ## 创建存储库

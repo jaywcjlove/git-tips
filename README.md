@@ -1119,6 +1119,12 @@ git pull --recurse-submodules
 git submodule deinit --all -f # 清理 submodule
 ```
 
+```bash
+git clone --recurse-submodules --depth=1 --shallow-submodules https://github.com/example/project.git
+# --depth 选项限制拉取历史记录的数量，以减少克隆所需的时间和空间
+# --shallow-submodules 则限制子模块拉取的历史记录数量，这两者的结合可以在 Git 项目中只拉取代码
+```
+
 ### 删除 submodule
 
 ```bash

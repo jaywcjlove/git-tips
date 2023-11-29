@@ -6,7 +6,6 @@ favicon: ./git.svg
 editButton: 
   label: Edit this page on GitHub
   url: https://github.com/jaywcjlove/git-tips/blob/master/
-  Sponsor: https://jaywcjlove.github.io/#/sponsor
 
 footer: |
   Released under the MIT License. Copyright © 2022 Kenny Wong<br />
@@ -18,3 +17,4 @@ sideEffectFiles:
 menus:
   首页: index.html
   入门清单: cheatsheet.html
+  Sponsor: https://jaywcjlove.github.io/#/sponsor

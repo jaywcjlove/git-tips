@@ -3,6 +3,7 @@ Git Tips
 ===
 <!--idoc:ignore:end-->
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
 [![Gitee Tips](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://jaywcjlove.gitee.io/git-tips/)
 [![CI](https://github.com/jaywcjlove/git-tips/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/git-tips/actions/workflows/ci.yml)
 

@@ -1384,8 +1384,8 @@ sudo chown -R yourname:yourgroup *
 ## 参考资料
 
 - [Git官网](http://git-scm.com/)
-- [**Github 15分钟学习Git**](https://try.github.io)
-- [Git参考手册](http://gitref.org/zh/index.html)
+- [Coddy Git 在线练习](https://coddy.tech/playground/git)
+- [Git 命令详解](https://coddy.tech/git-commands)
 - [Git简明手册](http://www.mceiba.com/tool/git-cheat-sheet.html)
 - [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 - [Git Community Book 中文版](http://gitbook.liuhui998.com/index.html)
